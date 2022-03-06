@@ -42,18 +42,18 @@ public class BowlingScoringCalculatorImpl implements BowlingScoringCalculator{
             return score;
     }
 
-    @Override
+
     public boolean isStrike(int toss){
         return rolls[toss] == 10;
     }
 
-    @Override
+
     public boolean isSpare(int toss){
         return rolls[toss] + rolls[toss+1] == 10;
     }
 
     // The result of a pair of rolls should not be over 10 (only ten pins per round)
-    @Override
+
     public boolean isRuleViolation(int toss){
         return rolls[toss] + rolls[toss+1] > 10;
     }
