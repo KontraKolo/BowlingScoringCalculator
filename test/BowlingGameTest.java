@@ -61,7 +61,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    public void SumOfFrameOver10() throws Exception {
+    public void sumOfFrameOver10() throws Exception {
         rolls = new int[]{6, 6};
         roll(rolls);
         Throwable exception = assertThrows(Exception.class, () -> bowlingScoringCalculator.score());
@@ -70,7 +70,7 @@ public class BowlingGameTest {
 
     // This tests the calculation included Strikes and Spears
     @Test
-    public void FullGame() throws Exception {
+    public void fullGame() throws Exception {
         rolls = new int[]{1, 4, 4, 5, 6, 4, 5, 5, 10, 0, 1, 7, 3, 6, 4, 10, 2, 8, 6};
         roll(rolls);
         Assertions.assertEquals(133, bowlingScoringCalculator.score());
